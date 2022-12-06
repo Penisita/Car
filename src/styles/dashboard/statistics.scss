@@ -1,0 +1,144 @@
+.statistics {
+  margin-top: 23px;
+}
+
+.statistics__chart {
+  max-width: 488px;
+  max-height: 332px;
+  background-color: #242731;
+  padding: 15px 35px;
+  border-radius: 14px;
+}
+
+.statistics__chart__title {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 24px;
+  b {
+    font-weight: 700;
+  }
+}
+
+.statistics__chart__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statistics__chart__header__info {
+  font-size: 14px;
+  font-weight: 700;
+  color: #bfc3c9;
+}
+
+.statistics__chart__header__controls {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  &__button {
+    color: #808191;
+    font-size: 10px;
+    background-color: transparent;
+    padding: 3.5px 12px 3.5px 12px;
+    border-radius: 24px;
+
+    &.active {
+      background-color: #2884ff;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    &:hover {
+      background-color: #3d73b9;
+    }
+  }
+}
+
+.statistics__chart__graph {
+  &__columns {
+    position: absolute;
+    z-index: 1;
+    padding-top: 14px;
+    display: flex;
+    align-items: flex-end;
+    height: 212px;
+    width: 418px;
+    justify-content: space-between;
+    div {
+      background: #1f2128;
+      width: 28px;
+      position: relative;
+      transition: background-color 0.3s ease;
+      &:nth-child(1) {
+        height: 163px;
+      }
+      &:nth-child(2) {
+        height: 124px;
+      }
+      &:nth-child(3) {
+        height: 185px;
+      }
+      &:nth-child(4) {
+        height: 107px;
+      }
+      &:nth-child(5) {
+        height: 163px;
+      }
+      &:nth-child(6) {
+        height: 78px;
+      }
+      &:nth-child(7) {
+        height: 134px;
+      }
+      &:after {
+        content: attr(data-text);
+        padding: 2px 29px 16px 8px;
+        white-space: nowrap;
+        font-size: 10px;
+        font-weight: 700;
+        color: #ffffff;
+        width: 53px;
+        height: 31px;
+        position: absolute;
+        background-color: #282b32;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.14);
+        border-radius: 5px;
+        margin-left: 14px;
+        margin-top: 30px;
+        transition: all 0.3s;
+        opacity: 0;
+      }
+
+      &:hover::after{
+        opacity: 1;
+      }
+      
+     
+
+
+      &:hover {
+        background-color: #2884ff;
+      }
+    }
+  }
+  &__time {
+    display: flex;
+    justify-content: space-between;
+    color: #7c7c8d;
+    padding: 17px 0px 10px 0px;
+  }
+}
+
+.statistics__chart__graph__grid {
+  position: relative;
+  display: flex;
+  margin-left: 48px;
+  gap: 64px;
+  top: 0;
+  div {
+    margin-top: 14px;
+    background-color: red;
+    width: 1px;
+    height: 198px;
+  }
+}

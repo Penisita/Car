@@ -1,0 +1,130 @@
+.dashboard {
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    height: 266px;
+    gap: 30px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 14px;
+    background-color: #242731;
+    padding: 22px;
+    cursor: pointer;
+
+    &:hover {
+      transition: background-color 0.4s ease;
+      svg {
+        stroke: #ffffff;
+
+        path {
+          transition: stroke 0.4s ease;
+        }
+      }
+
+      .dashboard__card__img {
+        background-color: #ffffff;
+      }
+    }
+    &_red {
+      .dashboard__card__img {
+        background-color: #ff7e861a;
+      }
+      .dashboard__card__diagram {
+        stroke: #ff7e86;
+      }
+
+      &:hover {
+        background-color: #ff7e86;
+
+        svg path:first-child {
+          stroke: #ffffff30;
+        }
+      }
+    }
+    &_purpal {
+      .dashboard__card__img {
+        background-color: #a162f71a;
+      }
+      .dashboard__card__diagram {
+        stroke: #a162f7;
+      }
+
+      &:hover {
+        background-color: #a162f7;
+
+        svg path:first-child {
+          stroke: #b37efc;
+        }
+      }
+    }
+    &_yellow {
+      .dashboard__card__img {
+        background-color: #f6cc0d1a;
+      }
+      .dashboard__card__diagram {
+        stroke: #f6cc0d;
+      }
+
+      &:hover {
+        background-color: #f6cc0d;
+
+        svg path:first-child {
+          stroke: #a162f71a;
+        }
+      }
+    }
+    &__img {
+      display: grid;
+      place-content: center;
+      height: 38px;
+      width: 38px;
+      background-color: #a162f71a;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      transition: background-color 0.4s ease;
+    }
+
+    &__title {
+      font-weight: 70;
+      font-size: 24px;
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+
+    &__diagram {
+      width: 112px;
+      height: 112px;
+      position: relative;
+      &__text {
+        font-weight: 700;
+        font-size: 24px;
+        color: #ffffff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      svg {
+        transform: rotate(225deg);
+        stroke-width: 3.5;
+        stroke-linecap: round;
+        width: 100%;
+        height: 100%;
+        path:last-child {
+          animation: progress 1s ease-out forwards;
+        }
+      }
+    }
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}

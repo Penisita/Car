@@ -1,0 +1,40 @@
+.aside {
+  position: fixed;
+  width: 248px;
+  &__logo {
+    padding: 30px 115px 35px 24px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0px 0px 30px 24px;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 174px;
+
+    &__link {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      padding: 7px 65px 7px 8px;
+      border-radius: 6px;
+      &.active {
+        background-color: #292e3d;
+        color: #ffffff;
+      }
+    }
+    &-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+  }
+}
+
+
