@@ -1,0 +1,29 @@
+.car__footer__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 29px;
+}
+
+.car__footer__gray__header {
+  &__icon {
+  }
+  &__title {
+  }
+  &____img {
+  }
+}
+
+.car__footer {
+  width: 318px;
+  height: 236px;
+  background-color: #e1dfa4;
+  border-radius: 14px;
+  &.white {
+    background-color: #e3ecf1;
+  }
+
+  &.red {
+    background-color: #f4e3e5;
+  }
+    
+}

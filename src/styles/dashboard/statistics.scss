@@ -1,13 +1,39 @@
 .statistics {
-  margin-top: 23px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13px;
 }
 
 .statistics__chart {
-  max-width: 488px;
+  width: 488px;
   max-height: 332px;
   background-color: #242731;
   padding: 15px 35px;
   border-radius: 14px;
+
+  &_orange {
+    .statistics__chart__graph__grid {
+      width: 450px;
+      margin-left: 0;
+      position: relative;
+      justify-content: space-between;
+      display: flex;
+      div{
+        background-color: red;
+      }
+    }
+    .statistics__chart__header__controls {
+      background-color: #2b2e38;
+      border-radius: 14px;
+
+      &__button {
+        &:hover {
+          background-color: #ff764c;
+          color: #fff;
+        }
+      }
+    }
+  }
 }
 
 .statistics__chart__title {
@@ -23,6 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .statistics__chart__header__info {
@@ -109,18 +136,19 @@
         opacity: 0;
       }
 
-      &:hover::after{
+      &:hover::after {
         opacity: 1;
       }
-      
-     
-
 
       &:hover {
         background-color: #2884ff;
       }
     }
   }
+
+  &.car {
+  }
+
   &__time {
     display: flex;
     justify-content: space-between;
@@ -137,7 +165,7 @@
   top: 0;
   div {
     margin-top: 14px;
-    background-color: red;
+    background-color: #282c2f;
     width: 1px;
     height: 198px;
   }
